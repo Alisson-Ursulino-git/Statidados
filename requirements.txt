@@ -1,0 +1,8 @@
+pandas
+numpy
+dontenv
+dtale.global_state
+dtale.app
+dtale.views
+flask
+waitress
