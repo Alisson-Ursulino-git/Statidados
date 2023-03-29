@@ -13,7 +13,6 @@ caminho = 'https://raw.githubusercontent.com/Alisson-Ursulino-git/Statidados/mai
 Dados   = pd.read_csv(caminho)
 df = Dados
 df.replace(to_replace='normal',value=np.nan, inplace=True)
-df.to_csv(r'C:\Users\aliss\Meu Drive (pesquisaursulino@gmail.com)\statidados\Live2\data_frame\data_frame.csv')
 c_type1 = df.dtypes.value_counts()
 
 
@@ -40,11 +39,8 @@ for i in range(len(col_price)):
 c_type2 = df.dtypes.value_counts()
 #%% Cria uma coluna do endereço completo
 df.columns[:13]
-#df['listing.address.streetNumber'].astype(str)[1]
 listaddress = ['listing.address.city','listing.address.neighborhood', 'listing.address.street']
-#df[listaddress].replace(to_replace='normal',value=None, inplace=True)
 listnumber = ['listing.address.streetNumber']
-#df[listnumber].replace(to_replace='normal',value=None, inplace=True)
 df['listing.address'] = df['listing.address.state'].str.cat(df[listaddress], sep=', ')
 df['listing.address'] = df['listing.address'].str.cat(df[listnumber].astype(str).replace('nan',''), sep = ' ')
 df['listing.address'] = df['listing.address'].replace(np.nan,'')
@@ -61,13 +57,4 @@ def created_data():
 
 created_data()
 
-#%% Usando o Dtale Localmente
-# import dtale
-# import dtale.app as dtale_app
-# def dtale_link():    
-#     dtale_app.USE_NGROK = True # HEROKU, RENDER
-#     d = dtale.show(new_df)
-#     link = d._url
-#     return link
-# dtale_link()
 
