@@ -1,6 +1,6 @@
 pandas
 numpy
-dontenv
+python-dotenv
 dtale.global_state
 dtale.app
 dtale.views
