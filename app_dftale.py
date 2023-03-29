@@ -10,16 +10,16 @@ from flask import redirect
 from waitress import serve #server()
 
 #%% Importando Dataframe
-import sys
-caminho = r'C:\Users\aliss\Meu Drive (pesquisaursulino@gmail.com)\statidados\Live2'
-sys.path.append(caminho)
+#import sys
+#caminho = r'C:\Users\aliss\Meu Drive (pesquisaursulino@gmail.com)\statidados\Live2'
+#sys.path.append(caminho)
 
 #import tratamento
 from data_frame.tratamento import created_data
 df = created_data()
 
 #%% Extraindo Senhas
-dotenv.load_dotenv(caminho+'\security\stat.env')
+#dotenv.load_dotenv(caminho+'\security\stat.env')
 login=os.getenv('login')
 password=os.getenv('senha')
 #%% Run D-Tale Flask APP
@@ -47,6 +47,5 @@ def create_df():
    
 if __name__ == '__main__':
     #app_dtale.run(host="127.0.0.1", port='5000')
-    serve(app_dtale
-    ,host="127.0.0.1", port='5000')
+    serve(app_dtale)
    
