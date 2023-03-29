@@ -1,11 +1,9 @@
 #%% importando as bibliotecas
-#import sys
-#import os
-import dotenv
+
 import pandas as pd
 
 import numpy as np
-import googlemaps
+
 
 
 #%% importando os Dados
