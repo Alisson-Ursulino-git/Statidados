@@ -1,8 +1,6 @@
 pandas
 numpy
 python-dotenv
-dtale.global_state
-dtale.app
-dtale.views
-flask
+dtale
+Flask
 waitress
